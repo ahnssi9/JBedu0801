@@ -1,0 +1,133 @@
+package chap8_interface;
+
+public interface Animal {
+	public void move();
+	public void cry();
+	public void eat();
+}
+
+
+package chap8_interface;
+
+public class Dog implements Animal {
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		System.out.println("dog -- move");
+	}
+
+	@Override
+	public void cry() {
+		// TODO Auto-generated method stub
+		System.out.println("dog -- cry");
+
+	}
+
+	@Override
+	public void eat() {
+		// TODO Auto-generated method stub
+		System.out.println("dog -- eat");
+
+
+		System.out.println("------------------------------------------------");
+	}
+
+}
+
+========================================================
+
+package chap8_interface;
+
+public class Cat implements Animal {
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		System.out.println("Cat -- move");
+
+	}
+
+	@Override
+	public void cry() {
+		// TODO Auto-generated method stub
+		System.out.println("Cat -- cry");
+
+		System.out.println("------------------------------------------------");
+	}
+
+	@Override
+	public void eat() {
+		// TODO Auto-generated method stub
+		System.out.println("Cat -- eat");
+
+	}
+
+}
+=================================================
+package chap8_interface;
+
+public class Tiger implements Animal {
+
+	@Override
+	public void move() {
+		// TODO Auto-generated method stub
+		System.out.println("Tiger -- move");
+
+	}
+
+	@Override
+	public void cry() {
+		// TODO Auto-generated method stub
+		System.out.println("Tiger -- cry");
+
+	}
+
+	@Override
+	public void eat() {
+		// TODO Auto-generated method stub
+		System.out.println("Tiger -- eat");
+		System.out.println("------------------------------------------------");
+	}
+
+}
+===================================================
+
+package chap8_interface;
+
+public class Mainclass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Animal animal;
+		Dog dog = new Dog();
+		animal = dog;
+		animal.cry();
+		animal.move();
+		animal.eat();
+		
+		Tiger tiger = new Tiger();
+		animal = tiger;
+		animal.cry();
+		animal.move();
+		animal.eat();
+		
+				
+	}
+
+}
+================================================
+
+dog -- cry
+dog -- move
+dog -- eat
+------------------------------------------------
+Tiger -- cry
+Tiger -- move
+Tiger -- eat
+------------------------------------------------
+
+
+
+
+
